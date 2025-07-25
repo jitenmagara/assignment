@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact Form with Validation</title>
+</head>
+
+<body>
+    <form>
+        <!-- Full Name: required, min 2, max 50 characters -->
+        <label for="fullname">Full Name</label><br>
+        <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="50" pattern="[A-Za-z\s'-]+"
+            title="Please enter 2-50 characters (letters, spaces, apostrophes or hyphens only)" /><br><br>
+
+        <!-- Email: required, built-in email pattern -->
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required /><br><br>
+
+        <!-- Phone Number: required, pattern for digits, spaces, dashes, parentheses, min 7, max 15 -->
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" id="phone" name="phone" required pattern="[\d\s\-\+\(\)]{7,15}"
+            title="Please enter a valid phone number (7 to 15 digits, spaces, +, - or parentheses allowed)" /><br><br>
+
+        <!-- Subject dropdown: required -->
+        <label for="subject">Subject</label><br>
+        <select id="subject" name="subject" required>
+            <option value="" disabled selected>-- Please choose a subject --</option>
+            <option value="general">General Inquiry</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <!-- Message textarea: required, min 10 characters, max 500 characters -->
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500"
+            placeholder="Your message here..."></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
