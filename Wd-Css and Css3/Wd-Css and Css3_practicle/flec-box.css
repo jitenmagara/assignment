@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header and Footer */
+.header,
+.footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Main layout container */
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Distributes space between sidebar and main content */
+    align-items: stretch;
+    /* Makes both sidebar and main content equal height */
+    padding: 1em;
+    gap: 1em;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #f4f4f4;
+    flex: 1;
+    min-width: 150px;
+    padding: 1em;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #e9ecef;
+    flex: 3;
+    padding: 1em;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
