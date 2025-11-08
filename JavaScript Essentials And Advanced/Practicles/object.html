@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Object Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        h1 {
+            color: #2b4f81;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .result {
+            background-color: #fff;
+            display: inline-block;
+            text-align: left;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Object: Car Example</h1>
+    <div id="output" class="result"></div>
+
+    <script>
+        let car = {
+            brand: "Toyota",
+            model: "Camry",
+            year: 2020
+        };
+
+        let brandModel = `Brand: ${car.brand}<br>Model: ${car.model}`;
+
+        car.year = 2024;
+        car.color = "Red";
+
+        let result = `
+      <strong>Car Details:</strong><br>
+      Brand: ${car.brand}<br>
+      Model: ${car.model}<br>
+      Year (updated): ${car.year}<br>
+      Color (new): ${car.color}
+    `;
+
+        console.log("Car Brand:", car.brand);
+        console.log("Car Model:", car.model);
+        console.log("Updated Car Object:", car);
+
+        document.getElementById("output").innerHTML = result;
+    </script>
+
+</body>
+
+</html>

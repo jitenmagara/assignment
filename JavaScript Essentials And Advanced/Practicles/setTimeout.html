@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Background Color After 5 Seconds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            transition: background-color 1s ease;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #2b4f81;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>setTimeout() Example</h1>
+    <p>The background color will change after <strong>5 seconds</strong>...</p>
+
+    <script>
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "lightblue";
+            document.querySelector("p").textContent = "Background color changed!";
+        }
+
+        setTimeout(changeBackgroundColor, 5000);
+    </script>
+
+</body>
+
+</html>

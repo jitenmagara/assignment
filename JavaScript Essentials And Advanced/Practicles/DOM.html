@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Text and Color using JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin-top: 100px;
+        }
+
+        p {
+            font-size: 24px;
+            color: black;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2b4f81;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1e3760;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript DOM Manipulation Example</h1>
+
+    <p id="message">Hello, World!</p>
+
+    <button id="changeBtn">Change Text & Color</button>
+
+    <script>
+        const paragraph = document.getElementById("message");
+        const button = document.getElementById("changeBtn");
+
+        button.addEventListener("click", function () {
+            paragraph.textContent = "JavaScript is fun!";
+            paragraph.style.color = "blue";
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sum of Even Numbers (While Loop)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        h1 {
+            color: #267aadd0;
+        }
+
+        p {
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sum of Even Numbers Between 1 and 20</h1>
+    <p id="output"></p>
+
+    <script>
+        let i = 1;
+        let sum = 0;
+
+        while (i <= 20) {
+            if (i % 2 === 0) {
+                sum += i;
+            }
+            i++;
+        }
+
+        document.getElementById("output").innerHTML =
+            `The sum of all even numbers between 1 and 20 is <strong>${sum}</strong>.`;
+    </script>
+
+</body>
+
+</html>

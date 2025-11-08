@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Do While Loop Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        h1 {
+            color: #2b4f81;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Enter a Number Greater Than 10</h1>
+    <input type="number" id="userInput" placeholder="Enter a number">
+    <button onclick="checkNumber()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        let number;
+
+        function checkNumber() {
+            number = parseFloat(document.getElementById("userInput").value);
+
+            do {
+                if (isNaN(number)) {
+                    document.getElementById("output").textContent = "⚠️ Please enter a valid number.";
+                    return;
+                }
+
+                if (number <= 10) {
+                    document.getElementById("output").textContent =
+                        `You entered ${number}. Please enter a number greater than 10.`;
+                    return;
+                }
+
+                document.getElementById("output").textContent =
+                    `Great! You entered ${number}, which is greater than 10.`;
+
+            } while (number <= 10);
+        }
+    </script>
+
+</body>
+
+</html>

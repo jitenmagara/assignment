@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sum of Array Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        h1 {
+            color: #2b4f81;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sum of Array Elements</h1>
+    <p id="output"></p>
+
+    <script>
+        let numbers = [10, 20, 30, 40, 50 ,60];
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        console.log("The sum of array elements is:", sum);
+
+        document.getElementById("output").innerHTML =
+            `The numbers are: [${numbers.join(", ")}] <br><br>The sum of all elements is <strong>${sum}</strong>.`;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Error Handling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #1cb781a4;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Try...Catch Error Handling Example</h1>
+    <p>We'll try to divide a number by zero and handle the error properly.</p>
+
+    <div id="result"></div>
+
+    <script>
+        try {
+            let numerator = 10;
+            let denominator = 0;
+
+            if (denominator === 0) {
+                throw new Error("Division by zero is not allowed!");
+            }
+
+            let result = numerator / denominator;
+            document.getElementById("result").textContent = `Result: ${result}`;
+
+        } catch (error) {
+            document.getElementById("result").textContent = `Error: ${error.message}`;
+            console.error("Error caught:", error.message);
+        }
+    </script>
+
+</body>
+
+</html>

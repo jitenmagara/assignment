@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Array Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        h1 {
+            color: #2b4f81;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Array Manipulation</h1>
+    <p id="output"></p>
+
+    <script>
+
+        let fruits = ["apple", "banana", "cherry"];
+        console.log("Original array:", fruits);
+
+        fruits.push("mango");
+        console.log("After adding a fruit:", fruits);
+
+        fruits.shift();
+        console.log("After removing the first fruit:", fruits);
+
+        document.getElementById("output").innerHTML =
+            `<strong>Modified Array:</strong> ${fruits.join(", ")}`;
+    </script>
+
+</body>
+
+</html>
