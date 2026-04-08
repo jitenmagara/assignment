@@ -1,17 +1,18 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main() {
     int num1, num2, sum;
 
-    printf("Enter first number: ");
-    scanf("%d", &num1);
+    cout << "Enter first number: ";
+    cin >> num1;
 
-    printf("Enter second number: ");
-    scanf("%d", &num2);
+    cout << "Enter second number: ";
+    cin >> num2;
 
     sum = num1 + num2;
 
-    printf("Sum = %d", sum);
+    cout << "Sum = " << sum;
 
     return 0;
 }
